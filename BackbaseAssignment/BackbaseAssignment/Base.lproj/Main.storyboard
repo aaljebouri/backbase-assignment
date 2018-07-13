@@ -36,8 +36,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bAA-q6-eHU"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather" largeTitleDisplayMode="always" id="62V-zO-HN3">
-                        <barButtonItem key="rightBarButtonItem" title="Add location" id="dVA-Gc-KDW"/>
+                    <navigationItem key="navigationItem" title="Weather" id="62V-zO-HN3">
+                        <barButtonItem key="rightBarButtonItem" title="Add location" id="dVA-Gc-KDW">
+                            <connections>
+                                <action selector="addLocationTapped:" destination="dLV-VI-0hy" id="6u5-pS-EwV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OV4-SX-bsD" userLabel="First Responder" sceneMemberID="firstResponder"/>

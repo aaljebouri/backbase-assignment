@@ -21,7 +21,10 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addLocationTapped(_ sender: Any) {
+        navigationController?.pushViewController(AddLocationViewController(), animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
