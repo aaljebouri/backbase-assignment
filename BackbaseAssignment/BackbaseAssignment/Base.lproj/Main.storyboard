@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-310" y="19"/>
         </scene>
-        <!--Weather-->
+        <!--All cities-->
         <scene sceneID="r7b-4h-UDg">
             <objects>
                 <viewController id="dLV-VI-0hy" customClass="HomeViewController" customModule="BackbaseAssignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bAA-q6-eHU"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather" id="62V-zO-HN3">
+                    <navigationItem key="navigationItem" title="All cities" id="62V-zO-HN3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dVA-Gc-KDW">
                             <connections>
                                 <action selector="addLocationTapped:" destination="dLV-VI-0hy" id="6u5-pS-EwV"/>

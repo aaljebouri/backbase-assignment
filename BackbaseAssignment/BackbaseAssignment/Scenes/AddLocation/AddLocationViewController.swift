@@ -23,10 +23,10 @@ class AddLocationViewController: UIViewController, LocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         if #available(iOS 11.0, *) {
             navigationItem.largeTitleDisplayMode = .never
         }
+        navigationItem.title = NSLocalizedString("Add location", comment: "")
         
         locationManager.delegate = self
         mapView.showsUserLocation = true

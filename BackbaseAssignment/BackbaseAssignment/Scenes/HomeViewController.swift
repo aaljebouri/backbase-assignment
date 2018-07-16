@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    // MARK: - IBOutlets
     @IBOutlet weak var citiesTableView: UITableView!
     
     // MARK: - Lifecycle
@@ -25,6 +26,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         citiesTableView.reloadData()
     }
     
+    // MARK: - IBActions
     @IBAction func addLocationTapped(_ sender: Any) {
         navigationController?.pushViewController(AddLocationViewController(), animated: true)
     }
@@ -42,7 +44,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CityViewController(), animated: true)
+        let cityViewController = CityViewController()
+        cityViewController.bookmarkedCity = DataManager.shared.bookmaredCities[indexPath.row]
+        navigationController?.pushViewController(cityViewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
