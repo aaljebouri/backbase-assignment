@@ -11,12 +11,7 @@ import UIKit
 class CityTableViewCell: UITableViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    func configure(with bookmarkedCity:BookmarkedCity) {
-        cityNameLabel.text = bookmarkedCity.name
+    func configure(with city:City) {
+        cityNameLabel.text = city.name
     }
 }

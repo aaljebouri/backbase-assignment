@@ -82,7 +82,7 @@ class AddLocationViewController: UIViewController, LocationManagerDelegate {
             return
         }
 
-        DataManager.shared.addBookmarkedCity(BookmarkedCity(locationCoordinates: Location(locationCoordinates:selectedLocation), cityName: selectedCityName))
+        DataManager.shared.addBookmarkedCity(City(locationCoordinates: Coordinates(locationCoordinates:selectedLocation), cityName: selectedCityName))
         navigationController?.popViewController(animated: true)
     }
 }

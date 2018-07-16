@@ -49,7 +49,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cityViewController = CityViewController()
-        cityViewController.bookmarkedCity = DataManager.shared.bookmaredCities[indexPath.row]
+        cityViewController.city = DataManager.shared.bookmaredCities[indexPath.row]
         navigationController?.pushViewController(cityViewController, animated: true)
     }
     

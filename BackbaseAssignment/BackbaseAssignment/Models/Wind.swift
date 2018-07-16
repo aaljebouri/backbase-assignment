@@ -10,11 +10,15 @@ import Foundation
 
 struct Wind : Codable {
     var speed:Double
-    var degree:Double
+    var degree:Double?
     var speedInKmHour:Double {
         return speed * 60 * 60 / 1000
     }
     var directionInCardinal:String {
+        guard let degree = self.degree else {
+            return "N"
+        }
+        
         switch degree {
         case _ where degree < 45:
             return "N"

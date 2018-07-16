@@ -13,19 +13,19 @@ class DataManager {
     
     static let shared = DataManager()
     
-    private(set) var bookmaredCities:[BookmarkedCity] = []
+    private(set) var bookmaredCities:[City] = []
     
     private init() {
         let userDefaults = UserDefaults.standard
         
         let bookmarkedCitiesSaved = userDefaults.object(forKey: bookmarkedCitiesKey)
         if let bookmarkedCitiesSaved = bookmarkedCitiesSaved as? Data {
-            let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: bookmarkedCitiesSaved) as? [BookmarkedCity]
+            let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: bookmarkedCitiesSaved) as? [City]
             bookmaredCities = unarchivedData!
         }
     }
     
-    func addBookmarkedCity(_ bookmarkedCity:BookmarkedCity) {
+    func addBookmarkedCity(_ bookmarkedCity:City) {
         bookmaredCities.append(bookmarkedCity)
         
         storeInUserDefaults()

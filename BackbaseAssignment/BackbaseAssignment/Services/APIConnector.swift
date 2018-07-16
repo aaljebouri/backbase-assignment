@@ -15,6 +15,7 @@ enum HTTPMethod : String {
 class APIConnector {
     private let apiKey = "c6e381d8c7ff98f0fee43775817cf6ad"
     private let baseUrl = "https://api.openweathermap.org/data/2.5"
+    private let appIdQueryParameter = "appid"
     
     static let shared = APIConnector()
     
@@ -51,7 +52,7 @@ class APIConnector {
     }
     
     private func createURLRequest(toEndpoint endpoint:String, using method:String) -> URLRequest {
-        let apiUrl = baseUrl + endpoint + "&units=metric&appid=\(apiKey)"
+        let apiUrl = (baseUrl + endpoint).addQueryParameter(appIdQueryParameter, value: apiKey)
         let url = URL(string: apiUrl)!
         
         var request = URLRequest(url: url)
