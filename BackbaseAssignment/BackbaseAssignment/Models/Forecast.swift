@@ -8,6 +8,12 @@
 
 import Foundation
 
-class Forecast: Codable {
+struct Forecast: Codable {
     var wind:Wind
+    var condition:Condition
+    var weather:[Weather]
+    
+    private enum CodingKeys : String, CodingKey {
+        case wind, condition = "main", weather
+    }
 }

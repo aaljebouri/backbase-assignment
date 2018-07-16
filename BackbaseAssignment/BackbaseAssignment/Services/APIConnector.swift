@@ -51,7 +51,7 @@ class APIConnector {
     }
     
     private func createURLRequest(toEndpoint endpoint:String, using method:String) -> URLRequest {
-        let apiUrl = baseUrl + endpoint + "&appid=\(apiKey)"
+        let apiUrl = baseUrl + endpoint + "&units=metric&appid=\(apiKey)"
         let url = URL(string: apiUrl)!
         
         var request = URLRequest(url: url)

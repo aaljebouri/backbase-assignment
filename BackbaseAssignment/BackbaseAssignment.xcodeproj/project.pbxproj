@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90A65D220FD450A00427803 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65D120FD450A00427803 /* Condition.swift */; };
+		D90A65D420FD47F400427803 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65D320FD47F400427803 /* Weather.swift */; };
 		D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D304420F7E1A600BA58BF /* AppDelegate.swift */; };
 		D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304A20F7E1A600BA58BF /* Main.storyboard */; };
 		D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94D304D20F7E1A700BA58BF /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D90A65D120FD450A00427803 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		D90A65D320FD47F400427803 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		D94D304120F7E1A600BA58BF /* BackbaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackbaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94D304420F7E1A600BA58BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94D304B20F7E1A600BA58BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				D94D307F20F91E4900BA58BF /* BookmarkedCity.swift */,
 				D94D309C20FD086700BA58BF /* Forecast.swift */,
 				D94D309E20FD08A300BA58BF /* Wind.swift */,
+				D90A65D120FD450A00427803 /* Condition.swift */,
+				D90A65D320FD47F400427803 /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +335,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94D309B20FD05FE00BA58BF /* CodableExtension.swift in Sources */,
+				D90A65D420FD47F400427803 /* Weather.swift in Sources */,
+				D90A65D220FD450A00427803 /* Condition.swift in Sources */,
 				D94D308920FC506400BA58BF /* UIView+Extension.swift in Sources */,
 				D94D309D20FD086700BA58BF /* Forecast.swift in Sources */,
 				D94D308320F928F000BA58BF /* CityTableViewCell.swift in Sources */,
