@@ -1,5 +1,5 @@
 //
-//  Forecast.swift
+//  Rain.swift
 //  BackbaseAssignment
 //
 //  Created by Abdul Aljebouri on 2018-07-16.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Forecast: Codable {
-    var wind:Wind
-    var condition:Condition
-    var rain:Rain?
-    var weather:[Weather]
+struct Rain : Codable {
+    var amount:Double
+    var amountRounded:Int {
+        return Int(round(amount))
+    }
     
     private enum CodingKeys : String, CodingKey {
-        case wind, condition = "main", rain, weather
+        case amount = "3h"
     }
 }

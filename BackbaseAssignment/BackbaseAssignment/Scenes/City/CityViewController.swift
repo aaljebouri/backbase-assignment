@@ -16,7 +16,7 @@ class CityViewController: UIViewController {
     @IBOutlet weak var conditionImage: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
-    @IBOutlet weak var chanceOfRainLabel: UILabel!
+    @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
 
     override func viewDidLoad() {
@@ -37,6 +37,7 @@ class CityViewController: UIViewController {
                 self.temperatureLabel.text = "\(forecast.condition.temperatureRounded)°"
                 self.humidityLabel.text = "\(forecast.condition.humidityPercentage)%"
                 self.windLabel.text = "\(forecast.wind.directionInCardinal) \(forecast.wind.speedInKmHour) km/hr"
+                self.precipitationLabel.text = "\(forecast.rain?.amountRounded ?? 0) mm"
                 self.populateWeatherIcon(from: forecast)
             }
         }
