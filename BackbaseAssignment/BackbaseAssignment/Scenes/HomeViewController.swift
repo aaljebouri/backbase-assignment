@@ -31,6 +31,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.pushViewController(AddLocationViewController(), animated: true)
     }
     
+    @IBAction func helpTapped(_ sender: Any) {
+        navigationController?.pushViewController(HelpViewController(), animated: true)
+    }
+    
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataManager.shared.bookmaredCities.count

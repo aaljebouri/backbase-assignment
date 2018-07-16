@@ -19,6 +19,6 @@ class CityViewController: UIViewController {
         if #available(iOS 11.0, *) {
             navigationItem.largeTitleDisplayMode = .never
         }
-        navigationItem.title = NSLocalizedString(bookmarkedCity.cityName, comment: "")
+        navigationItem.title = NSLocalizedString(bookmarkedCity.name, comment: "")
     }
 }

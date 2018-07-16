@@ -31,7 +31,7 @@ class Location : NSObject, NSCoding {
 
 class BookmarkedCity : NSObject, NSCoding {
     let locationCoordinates:Location
-    let cityName:String
+    let name:String
     
     static func == (lhs: BookmarkedCity, rhs: BookmarkedCity) -> Bool {
         return (lhs.locationCoordinates.latitude == rhs.locationCoordinates.latitude) &&
@@ -41,16 +41,16 @@ class BookmarkedCity : NSObject, NSCoding {
     // MARK: - NSCoding
     func encode(with aCoder: NSCoder) {
         aCoder.encode(locationCoordinates, forKey: "locationCoordinates")
-        aCoder.encode(cityName, forKey: "cityName")
+        aCoder.encode(name, forKey: "name")
     }
     
     init(locationCoordinates:Location, cityName:String) {
         self.locationCoordinates = locationCoordinates
-        self.cityName = cityName
+        self.name = cityName
     }
     
     required init?(coder aDecoder: NSCoder) {
         locationCoordinates = aDecoder.decodeObject(forKey: "locationCoordinates") as! Location
-        cityName = aDecoder.decodeObject(forKey: "cityName") as! String
+        name = aDecoder.decodeObject(forKey: "name") as! String
     }
 }

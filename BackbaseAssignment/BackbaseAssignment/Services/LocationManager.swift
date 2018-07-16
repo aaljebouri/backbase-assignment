@@ -50,7 +50,6 @@ class LocationManager : NSObject, CLLocationManagerDelegate {
 
             // City
             if let city = placeMark.subAdministrativeArea {
-                print(city)
                 cityName = city
             }
             

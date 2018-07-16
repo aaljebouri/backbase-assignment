@@ -13,7 +13,6 @@
 		D94D305120F7E1A700BA58BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304F20F7E1A700BA58BF /* LaunchScreen.storyboard */; };
 		D94D305C20F7E1A700BA58BF /* BackbaseAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D305B20F7E1A700BA58BF /* BackbaseAssignmentTests.swift */; };
 		D94D306C20F7E2A800BA58BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D306B20F7E2A800BA58BF /* HomeViewController.swift */; };
-		D94D307020F7E38C00BA58BF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D306F20F7E38C00BA58BF /* HelpViewController.swift */; };
 		D94D307820F7FC9800BA58BF /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307620F7FC9800BA58BF /* AddLocationViewController.swift */; };
 		D94D307920F7FC9800BA58BF /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D307720F7FC9800BA58BF /* AddLocationViewController.xib */; };
 		D94D307B20F7FDE300BA58BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307A20F7FDE200BA58BF /* LocationManager.swift */; };
@@ -26,6 +25,8 @@
 		D94D308F20FC522600BA58BF /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D308D20FC522600BA58BF /* CityViewController.swift */; };
 		D94D309020FC522600BA58BF /* CityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D308E20FC522600BA58BF /* CityViewController.xib */; };
 		D94D309220FC58EE00BA58BF /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309120FC58EE00BA58BF /* APIConnector.swift */; };
+		D94D309520FC612800BA58BF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309320FC612800BA58BF /* HelpViewController.swift */; };
+		D94D309620FC612800BA58BF /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D309420FC612800BA58BF /* HelpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,6 @@
 		D94D305B20F7E1A700BA58BF /* BackbaseAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackbaseAssignmentTests.swift; sourceTree = "<group>"; };
 		D94D305D20F7E1A700BA58BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94D306B20F7E2A800BA58BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D94D306F20F7E38C00BA58BF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		D94D307620F7FC9800BA58BF /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		D94D307720F7FC9800BA58BF /* AddLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationViewController.xib; sourceTree = "<group>"; };
 		D94D307A20F7FDE200BA58BF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		D94D308D20FC522600BA58BF /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		D94D308E20FC522600BA58BF /* CityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityViewController.xib; sourceTree = "<group>"; };
 		D94D309120FC58EE00BA58BF /* APIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
+		D94D309320FC612800BA58BF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		D94D309420FC612800BA58BF /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,8 @@
 		D94D306920F7E24E00BA58BF /* Help */ = {
 			isa = PBXGroup;
 			children = (
-				D94D306F20F7E38C00BA58BF /* HelpViewController.swift */,
+				D94D309320FC612800BA58BF /* HelpViewController.swift */,
+				D94D309420FC612800BA58BF /* HelpViewController.xib */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */,
 				D94D309020FC522600BA58BF /* CityViewController.xib in Resources */,
 				D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */,
+				D94D309620FC612800BA58BF /* HelpViewController.xib in Resources */,
 				D94D307920F7FC9800BA58BF /* AddLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,12 +309,12 @@
 			files = (
 				D94D308920FC506400BA58BF /* UIView+Extension.swift in Sources */,
 				D94D308320F928F000BA58BF /* CityTableViewCell.swift in Sources */,
-				D94D307020F7E38C00BA58BF /* HelpViewController.swift in Sources */,
 				D94D307B20F7FDE300BA58BF /* LocationManager.swift in Sources */,
 				D94D307D20F91D7800BA58BF /* DataManager.swift in Sources */,
 				D94D308F20FC522600BA58BF /* CityViewController.swift in Sources */,
 				D94D309220FC58EE00BA58BF /* APIConnector.swift in Sources */,
 				D94D307820F7FC9800BA58BF /* AddLocationViewController.swift in Sources */,
+				D94D309520FC612800BA58BF /* HelpViewController.swift in Sources */,
 				D94D308020F91E4900BA58BF /* BookmarkedCity.swift in Sources */,
 				D94D308720FC4FE900BA58BF /* UITableView+Extension.swift in Sources */,
 				D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */,

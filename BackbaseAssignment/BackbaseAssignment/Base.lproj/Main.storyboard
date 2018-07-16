@@ -54,6 +54,11 @@
                         <viewLayoutGuide key="safeArea" id="bAA-q6-eHU"/>
                     </view>
                     <navigationItem key="navigationItem" title="All cities" id="62V-zO-HN3">
+                        <barButtonItem key="leftBarButtonItem" title="Help" id="RSC-YS-fao">
+                            <connections>
+                                <action selector="helpTapped:" destination="dLV-VI-0hy" id="Uyu-sW-6Ey"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dVA-Gc-KDW">
                             <connections>
                                 <action selector="addLocationTapped:" destination="dLV-VI-0hy" id="6u5-pS-EwV"/>

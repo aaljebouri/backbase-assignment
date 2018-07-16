@@ -17,6 +17,6 @@ class CityTableViewCell: UITableViewCell {
     }
     
     func configure(with bookmarkedCity:BookmarkedCity) {
-        cityNameLabel.text = bookmarkedCity.cityName
+        cityNameLabel.text = bookmarkedCity.name
     }
 }
