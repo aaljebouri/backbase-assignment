@@ -19,8 +19,8 @@ class DataManager {
         let userDefaults = UserDefaults.standard
         
         let bookmarkedCitiesSaved = userDefaults.object(forKey: bookmarkedCitiesKey)
-        if let bookmarkedCitiesSaved = bookmarkedCitiesSaved as? NSData {
-            let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: bookmarkedCitiesSaved as Data) as? [BookmarkedCity]
+        if let bookmarkedCitiesSaved = bookmarkedCitiesSaved as? Data {
+            let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: bookmarkedCitiesSaved) as? [BookmarkedCity]
             bookmaredCities = unarchivedData!
         }
     }
@@ -31,19 +31,15 @@ class DataManager {
         storeInUserDefaults()
     }
     
-    func removeBookmarkedCity(_ bookmarkedCity:BookmarkedCity) {
-        let index = bookmaredCities.index(of: bookmarkedCity)
-        
-        if let index = index {
-            bookmaredCities.remove(at: index)
-        }
+    func removeBookmarkedCity(at index:Int) {
+        bookmaredCities.remove(at: index)
         
         storeInUserDefaults()
     }
     
     private func storeInUserDefaults() {
         let userDefaults = UserDefaults.standard
-        let archivedObject = NSKeyedArchiver.archivedData(withRootObject: bookmaredCities as NSArray) as NSData
+        let archivedObject = NSKeyedArchiver.archivedData(withRootObject: bookmaredCities as NSArray)
         userDefaults.set(archivedObject, forKey: bookmarkedCitiesKey)
         userDefaults.synchronize()
     }

@@ -37,8 +37,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="juK-bU-Qu3">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="dLV-VI-0hy" id="ns9-bj-jbB"/>
+                                    <outlet property="delegate" destination="dLV-VI-0hy" id="d5X-94-3Lm"/>
                                 </connections>
                             </tableView>
                         </subviews>

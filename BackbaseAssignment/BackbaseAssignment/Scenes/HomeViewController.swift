@@ -8,22 +8,20 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource {
-    private var bookmarkedCities:[BookmarkedCity] = []
-    
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var citiesTableView: UITableView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        citiesTableView.register(CityTableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
+        citiesTableView.registerNib(of: CityTableViewCell.self)
+        citiesTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        bookmarkedCities = DataManager.shared.bookmaredCities
         citiesTableView.reloadData()
     }
     
@@ -33,22 +31,28 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookmarkedCities.count
+        return DataManager.shared.bookmaredCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as! CityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier) as! CityTableViewCell
+        cell.configure(with: DataManager.shared.bookmaredCities[indexPath.row])
         return cell
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(CityViewController(), animated: true)
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { [unowned self] action, indexPath in
+            self.citiesTableView.beginUpdates()
+            DataManager.shared.removeBookmarkedCity(at: indexPath.row)
+            self.citiesTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.citiesTableView.endUpdates()
+        }
+        
+        return [deleteAction]
+    }
 }

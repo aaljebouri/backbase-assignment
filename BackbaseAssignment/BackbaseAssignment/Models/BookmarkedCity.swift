@@ -24,8 +24,8 @@ class Location : NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        latitude = aDecoder.decodeObject(forKey: "latitude") as! Double
-        longitude = aDecoder.decodeObject(forKey: "longitude") as! Double
+        latitude = aDecoder.decodeDouble(forKey: "latitude")
+        longitude = aDecoder.decodeDouble(forKey: "longitude")
     }
 }
 
