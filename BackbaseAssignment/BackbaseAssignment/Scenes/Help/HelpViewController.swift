@@ -29,8 +29,9 @@ class HelpViewController: UIViewController, WKUIDelegate {
         }
         navigationItem.title = NSLocalizedString("Help", comment: "")
         
-        let myURL = URL(string:"https://www.apple.com")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
+        if let path = Bundle.main.path(forResource:"Help", ofType: "html") {
+            let fileURL = URL(fileURLWithPath:path)
+            webView.loadFileURL(fileURL, allowingReadAccessTo:fileURL)
+        }
     }
 }

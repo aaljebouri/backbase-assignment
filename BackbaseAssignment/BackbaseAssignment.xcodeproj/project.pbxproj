@@ -27,6 +27,7 @@
 		D94D309220FC58EE00BA58BF /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309120FC58EE00BA58BF /* APIConnector.swift */; };
 		D94D309520FC612800BA58BF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309320FC612800BA58BF /* HelpViewController.swift */; };
 		D94D309620FC612800BA58BF /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D309420FC612800BA58BF /* HelpViewController.xib */; };
+		D94D309920FC685900BA58BF /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = D94D309820FC685900BA58BF /* Help.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D94D309120FC58EE00BA58BF /* APIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
 		D94D309320FC612800BA58BF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		D94D309420FC612800BA58BF /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		D94D309820FC685900BA58BF /* Help.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		D94D304320F7E1A600BA58BF /* BackbaseAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				D94D309720FC683500BA58BF /* Resources */,
 				D94D308520FC4FD100BA58BF /* Extensions */,
 				D94D307E20F91E3000BA58BF /* Models */,
 				D94D306A20F7E28500BA58BF /* Services */,
@@ -202,6 +205,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D94D309720FC683500BA58BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D94D309820FC685900BA58BF /* Help.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +299,7 @@
 				D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */,
 				D94D309020FC522600BA58BF /* CityViewController.xib in Resources */,
 				D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */,
+				D94D309920FC685900BA58BF /* Help.html in Resources */,
 				D94D309620FC612800BA58BF /* HelpViewController.xib in Resources */,
 				D94D307920F7FC9800BA58BF /* AddLocationViewController.xib in Resources */,
 			);
