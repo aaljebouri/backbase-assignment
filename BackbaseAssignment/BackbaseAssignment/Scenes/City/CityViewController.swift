@@ -20,5 +20,9 @@ class CityViewController: UIViewController {
             navigationItem.largeTitleDisplayMode = .never
         }
         navigationItem.title = NSLocalizedString(bookmarkedCity.name, comment: "")
+        
+        APIConnector.shared.performCall(toEndpoint: "/weather?lat=\(bookmarkedCity.locationCoordinates.latitude)&lon=\(bookmarkedCity.locationCoordinates.longitude)", using: .get, responseType: Forecast.self) { (error, forecast) in
+            print("\(forecast?.wind.speed ?? 0)")
+        }
     }
 }
