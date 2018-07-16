@@ -33,20 +33,38 @@
                     <view key="view" contentMode="scaleToFill" id="tKv-4v-cqU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="juK-bU-Qu3">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dLV-VI-0hy" id="ns9-bj-jbB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="juK-bU-Qu3" firstAttribute="trailing" secondItem="bAA-q6-eHU" secondAttribute="trailing" id="BBG-oc-gFQ"/>
+                            <constraint firstItem="juK-bU-Qu3" firstAttribute="top" secondItem="bAA-q6-eHU" secondAttribute="top" id="XxM-Y6-3pI"/>
+                            <constraint firstItem="juK-bU-Qu3" firstAttribute="bottom" secondItem="bAA-q6-eHU" secondAttribute="bottom" id="qov-nk-81L"/>
+                            <constraint firstItem="juK-bU-Qu3" firstAttribute="leading" secondItem="bAA-q6-eHU" secondAttribute="leading" id="v6X-AH-4kW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bAA-q6-eHU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="62V-zO-HN3">
-                        <barButtonItem key="rightBarButtonItem" title="Add location" id="dVA-Gc-KDW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dVA-Gc-KDW">
                             <connections>
                                 <action selector="addLocationTapped:" destination="dLV-VI-0hy" id="6u5-pS-EwV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="citiesTableView" destination="juK-bU-Qu3" id="VdJ-ft-aVj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OV4-SX-bsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="20"/>
+            <point key="canvasLocation" x="508" y="19.340329835082461"/>
         </scene>
     </scenes>
 </document>

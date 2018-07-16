@@ -8,21 +8,37 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UITableViewDataSource {
+    private var bookmarkedCities:[BookmarkedCity] = []
+    
+    @IBOutlet weak var citiesTableView: UITableView!
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
+        citiesTableView.register(CityTableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        bookmarkedCities = DataManager.shared.bookmaredCities
+        citiesTableView.reloadData()
     }
     
     @IBAction func addLocationTapped(_ sender: Any) {
         navigationController?.pushViewController(AddLocationViewController(), animated: true)
+    }
+    
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bookmarkedCities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as! CityTableViewCell
+        return cell
     }
     
     /*

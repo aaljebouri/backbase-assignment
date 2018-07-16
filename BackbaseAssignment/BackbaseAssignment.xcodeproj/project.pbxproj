@@ -18,6 +18,10 @@
 		D94D307820F7FC9800BA58BF /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307620F7FC9800BA58BF /* AddLocationViewController.swift */; };
 		D94D307920F7FC9800BA58BF /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D307720F7FC9800BA58BF /* AddLocationViewController.xib */; };
 		D94D307B20F7FDE300BA58BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307A20F7FDE200BA58BF /* LocationManager.swift */; };
+		D94D307D20F91D7800BA58BF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307C20F91D7800BA58BF /* DataManager.swift */; };
+		D94D308020F91E4900BA58BF /* BookmarkedCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307F20F91E4900BA58BF /* BookmarkedCity.swift */; };
+		D94D308320F928F000BA58BF /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D308120F928F000BA58BF /* CityTableViewCell.swift */; };
+		D94D308420F928F000BA58BF /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D308220F928F000BA58BF /* CityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		D94D307620F7FC9800BA58BF /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		D94D307720F7FC9800BA58BF /* AddLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationViewController.xib; sourceTree = "<group>"; };
 		D94D307A20F7FDE200BA58BF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D94D307C20F91D7800BA58BF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D94D307F20F91E4900BA58BF /* BookmarkedCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedCity.swift; sourceTree = "<group>"; };
+		D94D308120F928F000BA58BF /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		D94D308220F928F000BA58BF /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 		D94D304320F7E1A600BA58BF /* BackbaseAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				D94D307E20F91E3000BA58BF /* Models */,
 				D94D306A20F7E28500BA58BF /* Services */,
 				D94D306620F7E23300BA58BF /* Scenes */,
 				D94D304420F7E1A600BA58BF /* AppDelegate.swift */,
@@ -110,6 +119,8 @@
 		D94D306620F7E23300BA58BF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D94D308120F928F000BA58BF /* CityTableViewCell.swift */,
+				D94D308220F928F000BA58BF /* CityTableViewCell.xib */,
 				D94D307120F7F82F00BA58BF /* AddLocation */,
 				D94D306B20F7E2A800BA58BF /* HomeViewController.swift */,
 				D94D306920F7E24E00BA58BF /* Help */,
@@ -138,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D94D307A20F7FDE200BA58BF /* LocationManager.swift */,
+				D94D307C20F91D7800BA58BF /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -149,6 +161,14 @@
 				D94D307720F7FC9800BA58BF /* AddLocationViewController.xib */,
 			);
 			path = AddLocation;
+			sourceTree = "<group>";
+		};
+		D94D307E20F91E3000BA58BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D94D307F20F91E4900BA58BF /* BookmarkedCity.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94D308420F928F000BA58BF /* CityTableViewCell.xib in Resources */,
 				D94D305120F7E1A700BA58BF /* LaunchScreen.storyboard in Resources */,
 				D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */,
 				D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */,
@@ -253,10 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94D308320F928F000BA58BF /* CityTableViewCell.swift in Sources */,
 				D94D307020F7E38C00BA58BF /* HelpViewController.swift in Sources */,
 				D94D306E20F7E38400BA58BF /* CityViewController.swift in Sources */,
 				D94D307B20F7FDE300BA58BF /* LocationManager.swift in Sources */,
+				D94D307D20F91D7800BA58BF /* DataManager.swift in Sources */,
 				D94D307820F7FC9800BA58BF /* AddLocationViewController.swift in Sources */,
+				D94D308020F91E4900BA58BF /* BookmarkedCity.swift in Sources */,
 				D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */,
 				D94D306C20F7E2A800BA58BF /* HomeViewController.swift in Sources */,
 			);
