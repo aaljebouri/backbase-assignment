@@ -19,6 +19,8 @@
 		D90A65E320FD6DB400427803 /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309A20FD05FE00BA58BF /* CodableExtension.swift */; };
 		D90A65E520FD6EC400427803 /* RainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65E420FD6EC400427803 /* RainTests.swift */; };
 		D90A65E620FD6ED300427803 /* Rain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65DD20FD5CD200427803 /* Rain.swift */; };
+		D90A65E820FD6FBE00427803 /* WindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65E720FD6FBE00427803 /* WindTests.swift */; };
+		D90A65E920FD6FED00427803 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309E20FD08A300BA58BF /* Wind.swift */; };
 		D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D304420F7E1A600BA58BF /* AppDelegate.swift */; };
 		D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304A20F7E1A600BA58BF /* Main.storyboard */; };
 		D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94D304D20F7E1A700BA58BF /* Assets.xcassets */; };
@@ -64,6 +66,7 @@
 		D90A65DD20FD5CD200427803 /* Rain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain.swift; sourceTree = "<group>"; };
 		D90A65E020FD6C8100427803 /* ConditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTests.swift; sourceTree = "<group>"; };
 		D90A65E420FD6EC400427803 /* RainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainTests.swift; sourceTree = "<group>"; };
+		D90A65E720FD6FBE00427803 /* WindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindTests.swift; sourceTree = "<group>"; };
 		D94D304120F7E1A600BA58BF /* BackbaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackbaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94D304420F7E1A600BA58BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94D304B20F7E1A600BA58BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 			children = (
 				D90A65E020FD6C8100427803 /* ConditionTests.swift */,
 				D90A65E420FD6EC400427803 /* RainTests.swift */,
+				D90A65E720FD6FBE00427803 /* WindTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,9 +398,11 @@
 			files = (
 				D90A65E220FD6C9900427803 /* Condition.swift in Sources */,
 				D90A65E120FD6C8100427803 /* ConditionTests.swift in Sources */,
+				D90A65E920FD6FED00427803 /* Wind.swift in Sources */,
 				D90A65E320FD6DB400427803 /* CodableExtension.swift in Sources */,
 				D90A65E620FD6ED300427803 /* Rain.swift in Sources */,
 				D90A65E520FD6EC400427803 /* RainTests.swift in Sources */,
+				D90A65E820FD6FBE00427803 /* WindTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
