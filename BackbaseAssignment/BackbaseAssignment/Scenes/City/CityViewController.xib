@@ -40,10 +40,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pX5-uU-8Fn">
-                    <rect key="frame" x="0.0" y="148" width="320" height="128"/>
+                    <rect key="frame" x="0.0" y="148" width="320" height="112"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVN-xY-aEm">
-                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="128"/>
+                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="112"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzf-oF-z5z">
                                     <rect key="frame" x="0.0" y="16" width="101.5" height="19.5"/>
@@ -71,7 +71,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyC-aH-WKw">
-                            <rect key="frame" x="109.5" y="0.0" width="101" height="128"/>
+                            <rect key="frame" x="109.5" y="0.0" width="101" height="112"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precipitation" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pb-f4-V4p">
                                     <rect key="frame" x="0.0" y="16" width="100.5" height="19.5"/>
@@ -99,7 +99,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5b-1L-ebq">
-                            <rect key="frame" x="218.5" y="0.0" width="101.5" height="128"/>
+                            <rect key="frame" x="218.5" y="0.0" width="101.5" height="112"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-Qy-2rj">
                                     <rect key="frame" x="0.0" y="16" width="101.5" height="19.5"/>
@@ -128,17 +128,17 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="hlC-Uw-IPL"/>
+                        <constraint firstAttribute="height" constant="112" id="hlC-Uw-IPL"/>
                     </constraints>
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lMV-Pr-Bel">
-                    <rect key="frame" x="0.0" y="327.5" width="320" height="128"/>
+                    <rect key="frame" x="0.0" y="311.5" width="320" height="160"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="i7G-L1-iE4"/>
+                        <constraint firstAttribute="height" constant="160" id="i7G-L1-iE4"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJD-YO-u4W">
-                        <size key="itemSize" width="64" height="128"/>
+                        <size key="itemSize" width="64" height="160"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -148,7 +148,7 @@
                     </connections>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 day forecast:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBI-4m-Qul">
-                    <rect key="frame" x="16" y="292" width="116" height="19.5"/>
+                    <rect key="frame" x="16" y="276" width="116" height="19.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

@@ -9,12 +9,13 @@
 import Foundation
 
 struct Forecast: Codable {
+    var date:Date
     var wind:Wind
     var condition:Condition
     var rain:Rain?
     var weather:[Weather]
     
     private enum CodingKeys : String, CodingKey {
-        case wind, condition = "main", rain, weather
+        case wind, condition = "main", rain, weather, date = "dt"
     }
 }
