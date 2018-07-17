@@ -25,11 +25,11 @@ class CityTest: XCTestCase {
         let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: citiesSaved as! Data) as? [City]
         
         XCTAssertNotNil(unarchivedData)
-        XCTAssertEqual(unarchivedData?[0].coordinates.latitude, citites[0].coordinates.latitude)
-        XCTAssertEqual(unarchivedData?[0].coordinates.longitude, citites[0].coordinates.longitude)
+        XCTAssertEqual(unarchivedData?[0].coordinate.latitude, citites[0].coordinate.latitude)
+        XCTAssertEqual(unarchivedData?[0].coordinate.longitude, citites[0].coordinate.longitude)
         XCTAssertEqual(unarchivedData?[0].name, citites[0].name)
-        XCTAssertEqual(unarchivedData?[1].coordinates.longitude, citites[1].coordinates.longitude)
-        XCTAssertEqual(unarchivedData?[1].coordinates.latitude, citites[1].coordinates.latitude)
+        XCTAssertEqual(unarchivedData?[1].coordinate.longitude, citites[1].coordinate.longitude)
+        XCTAssertEqual(unarchivedData?[1].coordinate.latitude, citites[1].coordinate.latitude)
         XCTAssertEqual(unarchivedData?[1].name, citites[1].name)
     }
 }

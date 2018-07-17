@@ -34,6 +34,7 @@
 		D919A7A220FE69B100563217 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7A120FE69B100563217 /* CoordinateTests.swift */; };
 		D919A7A420FE6BA000563217 /* CityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7A320FE6BA000563217 /* CityTest.swift */; };
 		D919A7A620FE6FE400563217 /* Help.css in Resources */ = {isa = PBXBuildFile; fileRef = D919A7A520FE6FE300563217 /* Help.css */; };
+		D919A7AB20FE79B000563217 /* MockAPIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7AA20FE79B000563217 /* MockAPIConnector.swift */; };
 		D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D304420F7E1A600BA58BF /* AppDelegate.swift */; };
 		D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304A20F7E1A600BA58BF /* Main.storyboard */; };
 		D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94D304D20F7E1A700BA58BF /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		D919A7A120FE69B100563217 /* CoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
 		D919A7A320FE6BA000563217 /* CityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTest.swift; sourceTree = "<group>"; };
 		D919A7A520FE6FE300563217 /* Help.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Help.css; sourceTree = "<group>"; };
+		D919A7AA20FE79B000563217 /* MockAPIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIConnector.swift; sourceTree = "<group>"; };
 		D94D304120F7E1A600BA58BF /* BackbaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackbaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94D304420F7E1A600BA58BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94D304B20F7E1A600BA58BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D919A7A920FE79A100563217 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D919A7AA20FE79B000563217 /* MockAPIConnector.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D94D303820F7E1A500BA58BF = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		D94D305A20F7E1A700BA58BF /* BackbaseAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				D919A7A920FE79A100563217 /* Mocks */,
 				D919A79720FE668200563217 /* Services */,
 				D90A65DF20FD6C5E00427803 /* Models */,
 				D94D305D20F7E1A700BA58BF /* Info.plist */,
@@ -449,6 +460,7 @@
 				D919A79E20FE698A00563217 /* ForecastService.swift in Sources */,
 				D919A7A420FE6BA000563217 /* CityTest.swift in Sources */,
 				D90A65E820FD6FBE00427803 /* WindTests.swift in Sources */,
+				D919A7AB20FE79B000563217 /* MockAPIConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,29 +7,27 @@
 //
 
 import XCTest
+import CoreLocation
 
 class ForecastServiceTests: XCTestCase {
+    let apiConnectorMock = MockAPIConnector()
+    
+    var forecastService:ForecastService!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        forecastService = ForecastService(apiConnector: apiConnectorMock)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetForecastCallsAPICorrectly() {
+        let city = City(locationCoordinates:Coordinate(locationCoordinate:CLLocationCoordinate2D(latitude: 46.9, longitude: 2.1)), cityName: "that city")
+        
+        forecastService.getForecast(city) { _, _ in
+            
         }
+        
+        XCTAssertEqual(apiConnectorMock.endpointCaptured!, "/weather?lat=46.9&lon=2.1&units=metric")
+        XCTAssertEqual(apiConnectorMock.methodCaptured!, .get)
     }
-    
 }
