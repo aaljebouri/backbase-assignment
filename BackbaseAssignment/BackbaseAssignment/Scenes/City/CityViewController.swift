@@ -10,15 +10,19 @@ import UIKit
 
 //Today’s forecast, including: temperature, humidity, rain chances and wind information
 
-class CityViewController: UIViewController {
+class CityViewController: UIViewController, UICollectionViewDataSource {
+    // MARK: - Properties
     var city:City!
+    var forecasts = [Forecast]()
     
+    // MARK: - IBOutlets
     @IBOutlet weak var conditionImage: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var precipitationLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
-
+    @IBOutlet weak var fiveDayForecastCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +30,8 @@ class CityViewController: UIViewController {
             navigationItem.largeTitleDisplayMode = .never
         }
         navigationItem.title = NSLocalizedString(city.name, comment: "")
+        
+        fiveDayForecastCollectionView.registerNib(of: ForecastCollectionViewCell.self)
         
         ServiceLayer.shared.forecastService.getForecast(city) { error, forecast in
             guard let forecast = forecast else {
@@ -48,6 +54,25 @@ class CityViewController: UIViewController {
                 self.populateWeatherIcon(from: forecast)
             }
         }
+        
+        ServiceLayer.shared.forecastService.getFiveDayForecasts(city) { error, fiveDay in
+            guard let fiveDay = fiveDay else {
+                print("Error getting forecast")
+                
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title:  NSLocalizedString("Could not get 5 day forecast", comment: ""), message: NSLocalizedString("There was an issue fetching weather data from the server. Please try again later.", comment: ""), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.forecasts = fiveDay.forecasts
+                self.fiveDayForecastCollectionView.reloadData()
+            }
+        }
     }
     
     private func populateWeatherIcon(from forecast:Forecast) {
@@ -61,5 +86,16 @@ class CityViewController: UIViewController {
                 self.conditionImage.image = image
             }
         }
+    }
+    
+    // MARK: - UICollectionViewDataSource
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return forecasts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ForecastCollectionViewCell.identifier, for: indexPath) as! ForecastCollectionViewCell
+        cell.configure(with: forecasts[indexPath.row])
+        return cell
     }
 }

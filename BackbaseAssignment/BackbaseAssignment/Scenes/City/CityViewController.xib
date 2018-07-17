@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityViewController" customModule="BackbaseAssignment" customModuleProvider="target">
             <connections>
                 <outlet property="conditionImage" destination="CCf-bU-h0k" id="Dst-vV-wyc"/>
+                <outlet property="fiveDayForecastCollectionView" destination="lMV-Pr-Bel" id="UYr-ye-Ubd"/>
                 <outlet property="humidityLabel" destination="zWm-5m-N8M" id="ptW-Kw-B5F"/>
                 <outlet property="precipitationLabel" destination="R8I-xu-LEn" id="MCh-Ea-NbZ"/>
                 <outlet property="temperatureLabel" destination="ZJW-Wm-xjd" id="B6h-sJ-x5N"/>
@@ -130,16 +131,43 @@
                         <constraint firstAttribute="height" constant="128" id="hlC-Uw-IPL"/>
                     </constraints>
                 </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lMV-Pr-Bel">
+                    <rect key="frame" x="0.0" y="327.5" width="320" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="i7G-L1-iE4"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJD-YO-u4W">
+                        <size key="itemSize" width="64" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Zd5-Wu-m8j"/>
+                    </connections>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 day forecast:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBI-4m-Qul">
+                    <rect key="frame" x="16" y="292" width="116" height="19.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="lMV-Pr-Bel" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0rC-6Y-nO1"/>
+                <constraint firstItem="YBI-4m-Qul" firstAttribute="top" secondItem="pX5-uU-8Fn" secondAttribute="bottom" constant="16" id="JYQ-gu-RWP"/>
                 <constraint firstItem="CCf-bU-h0k" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="LOz-FI-ZJD"/>
                 <constraint firstItem="pX5-uU-8Fn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Tmr-lH-cln"/>
                 <constraint firstItem="pX5-uU-8Fn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VbW-Lg-N3p"/>
                 <constraint firstItem="ZJW-Wm-xjd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VeD-6y-5oc"/>
+                <constraint firstItem="lMV-Pr-Bel" firstAttribute="top" secondItem="YBI-4m-Qul" secondAttribute="bottom" constant="16" id="Ww2-rL-jKJ"/>
                 <constraint firstItem="ZJW-Wm-xjd" firstAttribute="top" secondItem="CCf-bU-h0k" secondAttribute="bottom" constant="32" id="Y4Z-ZW-lpV"/>
                 <constraint firstItem="CCf-bU-h0k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="erA-mP-zTn"/>
+                <constraint firstItem="lMV-Pr-Bel" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jU8-KU-QEK"/>
                 <constraint firstItem="pX5-uU-8Fn" firstAttribute="top" secondItem="ZJW-Wm-xjd" secondAttribute="bottom" constant="16" id="tkL-r8-IwG"/>
+                <constraint firstItem="YBI-4m-Qul" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vUx-5J-I3f"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

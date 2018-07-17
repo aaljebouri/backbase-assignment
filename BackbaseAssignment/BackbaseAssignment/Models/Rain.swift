@@ -9,9 +9,9 @@
 import Foundation
 
 struct Rain : Codable {
-    var amount:Double
+    var amount:Double?
     var amountRounded:Int {
-        return Int(round(amount))
+        return Int(round(amount ?? 0))
     }
     
     private enum CodingKeys : String, CodingKey {

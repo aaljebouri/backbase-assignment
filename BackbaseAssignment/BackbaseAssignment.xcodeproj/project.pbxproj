@@ -35,6 +35,11 @@
 		D919A7A420FE6BA000563217 /* CityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7A320FE6BA000563217 /* CityTest.swift */; };
 		D919A7A620FE6FE400563217 /* Help.css in Resources */ = {isa = PBXBuildFile; fileRef = D919A7A520FE6FE300563217 /* Help.css */; };
 		D919A7AB20FE79B000563217 /* MockAPIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7AA20FE79B000563217 /* MockAPIConnector.swift */; };
+		D919A7AD20FE7BD100563217 /* FiveDayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7AC20FE7BD100563217 /* FiveDayForecast.swift */; };
+		D919A7AE20FE7C3900563217 /* FiveDayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7AC20FE7BD100563217 /* FiveDayForecast.swift */; };
+		D919A7B120FE7D0C00563217 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7AF20FE7D0C00563217 /* ForecastCollectionViewCell.swift */; };
+		D919A7B220FE7D0C00563217 /* ForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D919A7B020FE7D0C00563217 /* ForecastCollectionViewCell.xib */; };
+		D919A7B420FE816200563217 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919A7B320FE816200563217 /* UICollectionView+Extension.swift */; };
 		D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D304420F7E1A600BA58BF /* AppDelegate.swift */; };
 		D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304A20F7E1A600BA58BF /* Main.storyboard */; };
 		D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94D304D20F7E1A700BA58BF /* Assets.xcassets */; };
@@ -88,6 +93,10 @@
 		D919A7A320FE6BA000563217 /* CityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTest.swift; sourceTree = "<group>"; };
 		D919A7A520FE6FE300563217 /* Help.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Help.css; sourceTree = "<group>"; };
 		D919A7AA20FE79B000563217 /* MockAPIConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIConnector.swift; sourceTree = "<group>"; };
+		D919A7AC20FE7BD100563217 /* FiveDayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayForecast.swift; sourceTree = "<group>"; };
+		D919A7AF20FE7D0C00563217 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		D919A7B020FE7D0C00563217 /* ForecastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastCollectionViewCell.xib; sourceTree = "<group>"; };
+		D919A7B320FE816200563217 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		D94D304120F7E1A600BA58BF /* BackbaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackbaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94D304420F7E1A600BA58BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94D304B20F7E1A600BA58BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -272,6 +281,7 @@
 				D90A65DD20FD5CD200427803 /* Rain.swift */,
 				D90A65D320FD47F400427803 /* Weather.swift */,
 				D94D309E20FD08A300BA58BF /* Wind.swift */,
+				D919A7AC20FE7BD100563217 /* FiveDayForecast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +293,7 @@
 				D90A65D920FD577800427803 /* String+Extension.swift */,
 				D94D308620FC4FE900BA58BF /* UITableView+Extension.swift */,
 				D94D308820FC506400BA58BF /* UIView+Extension.swift */,
+				D919A7B320FE816200563217 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +303,8 @@
 			children = (
 				D94D308120F928F000BA58BF /* CityTableViewCell.swift */,
 				D94D308220F928F000BA58BF /* CityTableViewCell.xib */,
+				D919A7AF20FE7D0C00563217 /* ForecastCollectionViewCell.swift */,
+				D919A7B020FE7D0C00563217 /* ForecastCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -389,6 +402,7 @@
 				D919A7A620FE6FE400563217 /* Help.css in Resources */,
 				D94D308420F928F000BA58BF /* CityTableViewCell.xib in Resources */,
 				D94D305120F7E1A700BA58BF /* LaunchScreen.storyboard in Resources */,
+				D919A7B220FE7D0C00563217 /* ForecastCollectionViewCell.xib in Resources */,
 				D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */,
 				D94D309020FC522600BA58BF /* CityViewController.xib in Resources */,
 				D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */,
@@ -415,10 +429,13 @@
 				D94D309B20FD05FE00BA58BF /* CodableExtension.swift in Sources */,
 				D90A65D420FD47F400427803 /* Weather.swift in Sources */,
 				D90A65D220FD450A00427803 /* Condition.swift in Sources */,
+				D919A7B120FE7D0C00563217 /* ForecastCollectionViewCell.swift in Sources */,
 				D94D308920FC506400BA58BF /* UIView+Extension.swift in Sources */,
 				D94D309D20FD086700BA58BF /* Forecast.swift in Sources */,
+				D919A7B420FE816200563217 /* UICollectionView+Extension.swift in Sources */,
 				D94D308320F928F000BA58BF /* CityTableViewCell.swift in Sources */,
 				D919A79B20FE68B800563217 /* ServiceLayer.swift in Sources */,
+				D919A7AD20FE7BD100563217 /* FiveDayForecast.swift in Sources */,
 				D94D307B20F7FDE300BA58BF /* LocationManager.swift in Sources */,
 				D94D307D20F91D7800BA58BF /* DataManager.swift in Sources */,
 				D90A65DA20FD577800427803 /* String+Extension.swift in Sources */,
@@ -449,6 +466,7 @@
 				D919A79620FE5F5700563217 /* Weather.swift in Sources */,
 				D919A79520FE5F5500563217 /* Forecast.swift in Sources */,
 				D919A79D20FE697E00563217 /* String+Extension.swift in Sources */,
+				D919A7AE20FE7C3900563217 /* FiveDayForecast.swift in Sources */,
 				D919A7A020FE699B00563217 /* Coordinate.swift in Sources */,
 				D919A79C20FE697200563217 /* APIConnector.swift in Sources */,
 				D90A65E320FD6DB400427803 /* CodableExtension.swift in Sources */,
