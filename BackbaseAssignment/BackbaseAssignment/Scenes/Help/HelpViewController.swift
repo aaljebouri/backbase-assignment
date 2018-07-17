@@ -31,7 +31,8 @@ class HelpViewController: UIViewController, WKUIDelegate {
         
         if let path = Bundle.main.path(forResource:"Help", ofType: "html") {
             let fileURL = URL(fileURLWithPath:path)
-            webView.loadFileURL(fileURL, allowingReadAccessTo:fileURL)
+            let fileDirectoryURL = fileURL.deletingLastPathComponent()
+            webView.loadFileURL(fileURL, allowingReadAccessTo:fileDirectoryURL)
         }
     }
 }

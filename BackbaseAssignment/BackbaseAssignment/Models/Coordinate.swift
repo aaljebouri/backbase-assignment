@@ -1,5 +1,5 @@
 //
-//  Coordinates.swift
+//  Coordinate.swift
 //  BackbaseAssignment
 //
 //  Created by Abdul Aljebouri on 2018-07-16.
@@ -9,13 +9,13 @@
 import Foundation
 import CoreLocation
 
-class Coordinates : NSObject, NSCoding {
+class Coordinate : NSObject, NSCoding {
     let latitude:Double
     let longitude:Double
     
-    init(locationCoordinates:CLLocationCoordinate2D) {
-        self.latitude = locationCoordinates.latitude
-        self.longitude = locationCoordinates.longitude
+    init(locationCoordinate:CLLocationCoordinate2D) {
+        self.latitude = locationCoordinate.latitude
+        self.longitude = locationCoordinate.longitude
     }
     
     func encode(with aCoder: NSCoder) {

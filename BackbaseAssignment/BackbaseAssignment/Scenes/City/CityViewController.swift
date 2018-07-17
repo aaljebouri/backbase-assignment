@@ -27,9 +27,16 @@ class CityViewController: UIViewController {
         }
         navigationItem.title = NSLocalizedString(city.name, comment: "")
         
-        ForecastService.shared.getForecast(city) { error, forecast in
+        ServiceLayer.shared.forecastService.getForecast(city) { error, forecast in
             guard let forecast = forecast else {
                 print("Error getting forecast")
+                
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title:  NSLocalizedString("Could not get forecast", comment: ""), message: NSLocalizedString("There was an issue fetching weather data from the server. Please try again later.", comment: ""), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
                 return
             }
             

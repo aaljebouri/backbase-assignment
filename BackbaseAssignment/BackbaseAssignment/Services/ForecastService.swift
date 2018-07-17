@@ -15,14 +15,18 @@ class ForecastService {
     private let unitQueryParameter = "units"
     private let defaultUnit = "metric"
     
-    static let shared = ForecastService()
+    private let apiConnector:APIConnector
+    
+    init(apiConnector: APIConnector) {
+        self.apiConnector = apiConnector
+    }
 
-    func getForecast(_ city:City, completion: @escaping (_ error:Error?, _ response:Forecast?) -> Void) {
-        let endpoint = weatherEndpoint.addQueryParameter(latitudeQueryParameter, value: city.coordinates.latitude)
-                                        .addQueryParameter(longitudeQueryParameter, value: city.coordinates.longitude)
+    func getForecast(_ city:City, completion: @escaping (_ error:APIError?, _ response:Forecast?) -> Void) {
+        let endpoint = weatherEndpoint.addQueryParameter(latitudeQueryParameter, value: city.coordinate.latitude)
+                                        .addQueryParameter(longitudeQueryParameter, value: city.coordinate.longitude)
                                         .addQueryParameter(unitQueryParameter, value: defaultUnit)
         
-        APIConnector.shared.performCall(toEndpoint: endpoint, using: .get, responseType: Forecast.self) { (error, forecast) in
+        apiConnector.performCall(toEndpoint: endpoint, using: .get, responseType: Forecast.self) { (error, forecast) in
             completion(error, forecast)
         }
     }

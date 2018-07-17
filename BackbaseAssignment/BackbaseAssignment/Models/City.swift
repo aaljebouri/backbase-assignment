@@ -9,22 +9,22 @@
 import Foundation
 
 class City : NSObject, NSCoding {
-    let coordinates:Coordinates
+    let coordinate:Coordinate
     let name:String
     
     // MARK: - NSCoding
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(coordinates, forKey: "coordinates")
+        aCoder.encode(coordinate, forKey: "coordinate")
         aCoder.encode(name, forKey: "name")
     }
     
-    init(locationCoordinates:Coordinates, cityName:String) {
-        self.coordinates = locationCoordinates
+    init(locationCoordinates:Coordinate, cityName:String) {
+        self.coordinate = locationCoordinates
         self.name = cityName
     }
     
     required init?(coder aDecoder: NSCoder) {
-        coordinates = aDecoder.decodeObject(forKey: "coordinates") as! Coordinates
+        coordinate = aDecoder.decodeObject(forKey: "coordinate") as! Coordinate
         name = aDecoder.decodeObject(forKey: "name") as! String
     }
 }

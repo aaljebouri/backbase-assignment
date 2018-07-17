@@ -37,26 +37,26 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.shared.bookmaredCities.count
+        return ServiceLayer.shared.dataManager.bookmaredCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier) as! CityTableViewCell
-        cell.configure(with: DataManager.shared.bookmaredCities[indexPath.row])
+        cell.configure(with: ServiceLayer.shared.dataManager.bookmaredCities[indexPath.row])
         return cell
     }
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cityViewController = CityViewController()
-        cityViewController.city = DataManager.shared.bookmaredCities[indexPath.row]
+        cityViewController.city = ServiceLayer.shared.dataManager.bookmaredCities[indexPath.row]
         navigationController?.pushViewController(cityViewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { [unowned self] action, indexPath in
             self.citiesTableView.beginUpdates()
-            DataManager.shared.removeBookmarkedCity(at: indexPath.row)
+            ServiceLayer.shared.dataManager.removeBookmarkedCity(at: indexPath.row)
             self.citiesTableView.deleteRows(at: [indexPath], with: .automatic)
             self.citiesTableView.endUpdates()
         }

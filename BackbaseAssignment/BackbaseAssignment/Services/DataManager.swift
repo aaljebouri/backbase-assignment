@@ -11,11 +11,9 @@ import Foundation
 class DataManager {
     private let bookmarkedCitiesKey = "bookmarkedCities"
     
-    static let shared = DataManager()
-    
     private(set) var bookmaredCities:[City] = []
     
-    private init() {
+    init() {
         let userDefaults = UserDefaults.standard
         
         let bookmarkedCitiesSaved = userDefaults.object(forKey: bookmarkedCitiesKey)

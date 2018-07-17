@@ -43,14 +43,18 @@ class LocationManager : NSObject, CLLocationManagerDelegate {
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
         geoCoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            var cityName:String?
+            guard let placemarks = placemarks, placemarks.count > 0 else {
+                return
+            }
             
             // Place details
             var placeMark: CLPlacemark!
-            placeMark = placemarks?[0]
+            placeMark = placemarks[0]
+            
+            var cityName:String?
 
             // City
-            if let city = placeMark.subAdministrativeArea {
+            if let city = placeMark.locality {
                 cityName = city
             }
             
