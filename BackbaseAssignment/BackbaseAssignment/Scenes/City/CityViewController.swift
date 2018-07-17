@@ -35,7 +35,7 @@ class CityViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.temperatureLabel.text = "\(forecast.condition.temperatureRounded)°"
-                self.humidityLabel.text = "\(forecast.condition.humidityPercentage)%"
+                self.humidityLabel.text = "\(forecast.condition.humidity)%"
                 self.windLabel.text = "\(forecast.wind.directionInCardinal) \(forecast.wind.speedInKmHour) km/hr"
                 self.precipitationLabel.text = "\(forecast.rain?.amountRounded ?? 0) mm"
                 self.populateWeatherIcon(from: forecast)

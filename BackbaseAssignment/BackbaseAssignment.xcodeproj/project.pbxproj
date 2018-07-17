@@ -14,11 +14,13 @@
 		D90A65DA20FD577800427803 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65D920FD577800427803 /* String+Extension.swift */; };
 		D90A65DC20FD5A4400427803 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65DB20FD5A4400427803 /* Coordinates.swift */; };
 		D90A65DE20FD5CD200427803 /* Rain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65DD20FD5CD200427803 /* Rain.swift */; };
+		D90A65E120FD6C8100427803 /* ConditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65E020FD6C8100427803 /* ConditionTests.swift */; };
+		D90A65E220FD6C9900427803 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A65D120FD450A00427803 /* Condition.swift */; };
+		D90A65E320FD6DB400427803 /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D309A20FD05FE00BA58BF /* CodableExtension.swift */; };
 		D94D304520F7E1A600BA58BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D304420F7E1A600BA58BF /* AppDelegate.swift */; };
 		D94D304C20F7E1A600BA58BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304A20F7E1A600BA58BF /* Main.storyboard */; };
 		D94D304E20F7E1A700BA58BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94D304D20F7E1A700BA58BF /* Assets.xcassets */; };
 		D94D305120F7E1A700BA58BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94D304F20F7E1A700BA58BF /* LaunchScreen.storyboard */; };
-		D94D305C20F7E1A700BA58BF /* BackbaseAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D305B20F7E1A700BA58BF /* BackbaseAssignmentTests.swift */; };
 		D94D306C20F7E2A800BA58BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D306B20F7E2A800BA58BF /* HomeViewController.swift */; };
 		D94D307820F7FC9800BA58BF /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D307620F7FC9800BA58BF /* AddLocationViewController.swift */; };
 		D94D307920F7FC9800BA58BF /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94D307720F7FC9800BA58BF /* AddLocationViewController.xib */; };
@@ -58,6 +60,7 @@
 		D90A65D920FD577800427803 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D90A65DB20FD5A4400427803 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		D90A65DD20FD5CD200427803 /* Rain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain.swift; sourceTree = "<group>"; };
+		D90A65E020FD6C8100427803 /* ConditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTests.swift; sourceTree = "<group>"; };
 		D94D304120F7E1A600BA58BF /* BackbaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackbaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94D304420F7E1A600BA58BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94D304B20F7E1A600BA58BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		D94D305020F7E1A700BA58BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D94D305220F7E1A700BA58BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94D305720F7E1A700BA58BF /* BackbaseAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackbaseAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D94D305B20F7E1A700BA58BF /* BackbaseAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackbaseAssignmentTests.swift; sourceTree = "<group>"; };
 		D94D305D20F7E1A700BA58BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94D306B20F7E2A800BA58BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D94D307620F7FC9800BA58BF /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D90A65DF20FD6C5E00427803 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D90A65E020FD6C8100427803 /* ConditionTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D94D303820F7E1A500BA58BF = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +154,7 @@
 		D94D305A20F7E1A700BA58BF /* BackbaseAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				D94D305B20F7E1A700BA58BF /* BackbaseAssignmentTests.swift */,
+				D90A65DF20FD6C5E00427803 /* Models */,
 				D94D305D20F7E1A700BA58BF /* Info.plist */,
 			);
 			path = BackbaseAssignmentTests;
@@ -378,7 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94D305C20F7E1A700BA58BF /* BackbaseAssignmentTests.swift in Sources */,
+				D90A65E220FD6C9900427803 /* Condition.swift in Sources */,
+				D90A65E120FD6C8100427803 /* ConditionTests.swift in Sources */,
+				D90A65E320FD6DB400427803 /* CodableExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

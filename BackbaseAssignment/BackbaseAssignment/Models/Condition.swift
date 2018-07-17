@@ -10,12 +10,12 @@ import Foundation
 
 struct Condition : Codable {
     var temperature:Double
-    var humidityPercentage:Double
+    var humidity:Double
     var temperatureRounded:Int {
         return Int(round(temperature))
     }
     
     private enum CodingKeys : String, CodingKey {
-        case temperature = "temp", humidityPercentage = "humidity"
+        case temperature = "temp", humidity
     }
 }
